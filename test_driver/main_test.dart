@@ -7,8 +7,6 @@ void main() {
     () {
       late FlutterDriver driver;
 
-      // final Map config = Config()
-
       setUpAll(
         () async {
           driver = await FlutterDriver.connect();
