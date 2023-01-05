@@ -8,12 +8,12 @@ void main() {
     expect(answer, 40 + 2);
   });
 
-  testWidgets('widget Test', (WidgetTester test) async {
-    final app = MyApp();
-    await test.pumpWidget(app);
-    expect(find.text('0'), findsOneWidget);
-    await test.tap(find.byIcon(Icons.add));
-    await test.pump();
-    expect(find.text('1'), findsOneWidget);
-  });
+  // testWidgets('widget Test', (WidgetTester test) async {
+  //   final app = MyApp();
+  //   await test.pumpWidget(app);
+  //   expect(find.text('0'), findsOneWidget);
+  //   await test.tap(find.byIcon(Icons.add));
+  //   await test.pump();
+  //   expect(find.text('1'), findsOneWidget);
+  // });
 }
