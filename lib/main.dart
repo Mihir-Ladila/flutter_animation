@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:widget_to_photo/pages/home.dart';
+import 'package:widget_to_photo/temp.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: TempPage(title: 'Test'),
     );
   }
 }

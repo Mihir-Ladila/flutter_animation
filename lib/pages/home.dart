@@ -28,6 +28,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   double opacity = 0;
   late AnimationController controller;
   late Animation<double> anim;
+  int intVal = 0;
   @override
   void initState() {
     initializeAnim();
@@ -86,6 +87,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 
   @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
@@ -139,6 +146,19 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 width: 200,
               ),
               Divider(thickness: 2),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(intVal.toString()),
+                  IconButton(
+                    onPressed: () {
+                      intVal++;
+                      setState(() {});
+                    },
+                    icon: Icon(Icons.add),
+                  )
+                ],
+              ),
               Hero(
                 tag: 'tag',
                 child: ElevatedButton(
